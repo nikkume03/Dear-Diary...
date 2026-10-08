@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 108px;
+    font-family: "Jua", sans-serif;
+    background: #eadfe3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    color: #4a3940;
+}
+
+/* MAIN */
+.diary {
+    width: 900px;
+    max-width: 100%;
+    min-height: 650px;
+    background: #fffaf4;
+    border-radius: 18pv;
+    box-shadow:
+        0 20px 50px rgba(70, 45, 55, 0.25);
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    overflow: hidden;
+}
+
+/* LEFT */
+.sidebar {
+    background: #704f5d;
+    color: white;
+    padding: 40px 25px;
+    text-align: center;
+    position: relative;
+}
+
+.sidebar h1 {
+    font-size: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sidebar p {
+    margin-top: 50px;
+    font-size: 15px;
+    opacity: 0.85;
+    line-height: 1.6;
+}
+
+.moon {
+    font-size: 65px;
+    margin: 50px 10px 25px;
+}
+
+.quote {
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-top: 50px;
+}
+
+/* FLOWERS */
+.flower {
+    position: absolute;
+    font-size: 30px;
+}
+
+#flower1 {
+    top: 20px;
+    left: 18px;
+}
+
+#flower2 {
+    bottom: 20px;
+    right: 18px;
+}
+
+/* MAIN */
+.content {
+    padding: 40px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 20px;
+}
+
+.top h2 {
+    font-size: 30px;
+    color: #5c414c;
+}
+
+.date { display:flex; gap:5px; }
+
+.date input {
+    width:40px;
+    padding:7px 3px;
+    border:0;
+    border-bottom:2px solid #c9aab4;
+    background:transparent;
+    font:14px "Jua",sans-serif;
+    text-align:center;
+    outline:none;
+}
+
+.date input:nth-child(2){width:55px}
+.date input:nth-child(3){width:50px}
+
+/* MOOD */
+.mood-title {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #80616c;
+}
+
+.moods {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.mood {
+    padding: 9px 14px;
+    background: #f8edf0;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.mood:hover {
+    background: #e8cbd4;
+    transform: translateY(-3px);
+}
+
+/* DIARY ENTRY */
+.paper {
+    position: relative;
+    min-height: 390px;
+    padding: 25px 25px 25px 55px;
+    border-radius: 10px;
+    border: 1px solid #eadfe1;
+    box-shadow:
+        0 0 20px rgba(100, 70, 80, 0.06);
+}
+
+/* RED LINE */
+.paper::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    width: 1px;
+    background: #d9aeb9;
+}
+
+.paper h3 {
+    margin-bottom: 10px;
+    color: #765461;
+    font-size: 21px;
+}
+
+/* TEXT AREA */
+textarea {
+    width: 100%;
+    height: 290px;
+    resize: none;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 17px;
+    line-height: 32px;
+    color: #4b3a40;
+}
+
+textarea::placeholder {
+    color: #a9949b;
+    font-style: italic;
+}
+
+/* BOTTOM */
+.bottom {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.signature {
+    font-style: italic;
+    color: #80616c;
+}
+
+.save {
+    padding: 11px 20px;
+    border: none;
+    border-radius: 25px;
+    background: #704f5d;
+    color: white;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.save:hover {
+    background: #543a46;
+    transform: translateY(-2px);
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+    body {
+        padding: 15px;
+    }
+    .sidebar {
+        padding: 25px;
+    }
+
+    .moon {
+        margin: 20px 0;
+    }
+
+    .content {
+        padding: 25px;
+    }
+
+    .paper {
+        padding-left: 45px;
+    }
+
+}
